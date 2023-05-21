@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DrawerItems {
-  static final Color drawerItemColor = Colors.blueGrey;
+  static final Color drawerItemColor = Colors.black;
   static final Color drawerItemSelectedColor = Colors.blue.shade900;
   static final Color selectedTileColor = Colors.cyan.shade100;
   static final Color tileColor = Colors.white;
