@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'screens/drafts_screen.dart';
+import 'screens/inbox_screen.dart';
+import 'screens/sent_screen.dart';
+import 'screens/spam_screen.dart';
+import 'screens/starred_screen.dart';
+import 'screens/trash_screen.dart';
+import 'defaults/defaults.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,9 +20,24 @@ class MainApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  bool isSelected = false;
+  var indexClicked = [0, 1, 2, 3, 4, 5];
+  final screens = [
+    InboxScreen(),
+    StarredScreen(),
+    SentScreen(),
+    DraftsScreen(),
+    TrashScreen(),
+    SpamScreen(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,10 +72,40 @@ class HomePage extends StatelessWidget {
                         fontWeight: FontWeight.w900,
                         fontSize: 25,
                         color: Colors.white),
-                  )
+                  ),
+                  
                 ],
               ),
             ),
+            Expanded(
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    leading: Icon(
+                      Defaults.drawerItemIcon[index],
+                      color: isSelected
+                          ? Defaults.drawerItemSelectedColor
+                          : Defaults.drawerItemColor,
+                      size: 30,
+                    ),
+                    title: Text(
+                      Defaults.drawerItemText[index],
+                      style: TextStyle(
+                          fontSize: 20, color: Defaults.drawerItemColor),
+                    ),
+                    // selected: isSelected,
+                    // selectedColor: Defaults.drawerItemSelectedColor,
+                    onTap: () {
+                      setState(() {
+                        isSelected = true;
+                      });
+                    },
+                  );
+                },
+                itemCount: screens.length,
+                padding: const EdgeInsets.all(0),
+              ),
+            )
           ],
         ),
       ),
