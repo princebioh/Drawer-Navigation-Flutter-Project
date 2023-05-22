@@ -1,3 +1,2 @@
-# drawer_navig
-
-A new Flutter project.
+# Flutter Drawer Navigation 
+A simple flutter project to implement drawer navigation.
