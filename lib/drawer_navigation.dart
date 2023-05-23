@@ -18,7 +18,7 @@ class DrawerNavigation extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-            padding: EdgeInsets.only(left: 10),
+            padding: const EdgeInsets.only(left: 10),
             margin: EdgeInsets.zero,
             child: Row(
               children: [

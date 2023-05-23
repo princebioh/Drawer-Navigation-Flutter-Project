@@ -14,7 +14,7 @@ class DraftsPage extends StatelessWidget {
       body: const Center(
         child: Text("This is Drafts Page"),
       ),
-      drawer: DrawerNavigation(),
+      drawer: const DrawerNavigation(),
     );
   }
 }

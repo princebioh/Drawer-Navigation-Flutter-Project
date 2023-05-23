@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'drawer_navigation.dart';
 
 void main(List<String> args) {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: HomePage(),
     );
   }
@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("The Navigation Drawer"),
       ),
-      drawer: DrawerNavigation(),
+      endDrawer: const DrawerNavigation(),
     );
   }
 }

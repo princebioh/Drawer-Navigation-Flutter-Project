@@ -15,7 +15,7 @@ class TrashPage extends StatelessWidget {
       body: const Center(
         child: Text("This is Trash Page"),
       ),
-      drawer: DrawerNavigation(),
+      drawer: const DrawerNavigation(),
     );
   }
 }

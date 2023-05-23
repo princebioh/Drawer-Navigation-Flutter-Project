@@ -15,7 +15,7 @@ class SentPage extends StatelessWidget {
       body: const Center(
         child: Text("This is Sent Page"),
       ),
-      drawer: DrawerNavigation(),
+      drawer: const DrawerNavigation(),
     );
   }
 }

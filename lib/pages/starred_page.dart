@@ -15,7 +15,7 @@ class StarredPage extends StatelessWidget {
       body: const Center(
         child: Text("This is Starred Page"),
       ),
-      drawer: DrawerNavigation(),
+      drawer: const DrawerNavigation(),
     );
   }
 }

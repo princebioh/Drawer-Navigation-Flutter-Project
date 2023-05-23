@@ -15,7 +15,7 @@ class InboxPage extends StatelessWidget {
       body: const Center(
         child: Text("This is Inbox Page"),
       ),
-      drawer: DrawerNavigation(),
+      drawer: const DrawerNavigation(),
     );
   }
 }

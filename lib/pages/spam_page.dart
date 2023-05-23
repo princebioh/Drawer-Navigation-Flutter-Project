@@ -15,7 +15,7 @@ class SpamPage extends StatelessWidget {
       body: const Center(
         child: Text("This is Spam Page"),
       ),
-      drawer: DrawerNavigation(),
+      drawer: const DrawerNavigation(),
     );
   }
 }
